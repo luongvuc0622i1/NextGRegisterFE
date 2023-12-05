@@ -18,11 +18,11 @@
   <div class="detail-content">
     <div class="setting-actions">
       <div class="nav-settings">
-        <a class="nav-setting-item body-4" (click)="chooseTab('general')" [ngClass]="{ 'button-orange button-2': tabChoose === 'general' }"><i class="fa-solid fa-gear"></i> General</a>
-        <a class="nav-setting-item body-4" (click)="chooseTab('password')" [ngClass]="{ 'button-orange button-2': tabChoose === 'password' }"><i class="fa-solid fa-lock"></i> Password</a>
-        <a class="nav-setting-item body-4" (click)="chooseTab('billing')" [ngClass]="{ 'button-orange button-2': tabChoose === 'billing' }"><i class="fa-solid fa-wallet"></i> Billing</a>
+        <a class="nav-setting-item body-4 pointer" (click)="chooseTab('general')" [ngClass]="{ 'button-orange button-2': tabChoose === 'general' }"><i class="fa-solid fa-gear"></i> General</a>
+        <a class="nav-setting-item body-4 pointer" (click)="chooseTab('password')" [ngClass]="{ 'button-orange button-2': tabChoose === 'password' }"><i class="fa-solid fa-lock"></i> Password</a>
+        <a class="nav-setting-item body-4 pointer" (click)="chooseTab('billing')" [ngClass]="{ 'button-orange button-2': tabChoose === 'billing' }"><i class="fa-solid fa-wallet"></i> Billing</a>
         <div class="divider"></div>
-        <a class="nav-setting-item logout-item" (click)="logout()"><i class="fa-solid fa-power-off"></i> Log Out</a>
+        <a class="nav-setting-item logout-item pointer" (click)="logout()"><i class="fa-solid fa-power-off"></i> Log Out</a>
       </div>
     </div>
     <div class="setting-user-detail">

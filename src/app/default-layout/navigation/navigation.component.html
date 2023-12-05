@@ -3,7 +3,7 @@
     <button class="open-menu btn-menu" onclick="openMenu()">
       <i class="fa-solid fa-bars"></i>
     </button>
-    <img src="../../../assets/nextG.png" />
+    <img src="../../../assets/nextG.png" class="pointer" (click)="onClick('home')" />
   </div>
   <div class="nav-links">
     <a>Tab 1</a>
@@ -23,8 +23,8 @@
       </div>
   </div>
   <div class="nav-actions" *ngIf="!isTokenValid">
-    <button class="signup" (click)="goToSignUp()">Sign Up</button>
-    <button class="signin" (click)="goToSignIn()">Sign In</button>
+    <button class="signup pointer" (click)="goToSignUp()">Sign Up</button>
+    <button class="signin pointer" (click)="goToSignIn()">Sign In</button>
   </div>
 </div>
 <div class="side-menu" id="side-menu">
