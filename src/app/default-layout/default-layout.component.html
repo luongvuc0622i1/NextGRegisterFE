@@ -1,0 +1,20 @@
+<app-navigation></app-navigation>
+<div style="top: 82px; position: relative;">
+  <div style="min-height: calc(100vh - 82px);">
+    <ng-container *ngIf="currentPath != 'settings'; else pageSettings">
+      <ng-container *ngIf="currentPath != 'payment'; else pagePayment">
+        <ng-container *ngTemplateOutlet="pageHome"></ng-container>
+      </ng-container>
+    </ng-container>
+    <ng-template #pageHome>
+      <app-landing-page></app-landing-page>
+    </ng-template>
+    <ng-template #pageSettings>
+      <app-settings></app-settings>
+    </ng-template>
+    <ng-template #pagePayment>
+      <app-payment></app-payment>
+    </ng-template>
+  </div>
+  <app-footer></app-footer>
+</div>

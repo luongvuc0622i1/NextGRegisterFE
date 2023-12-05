@@ -1,0 +1,37 @@
+<div class="header">
+  <div class="nav-logo-mb-menu">
+    <button class="open-menu btn-menu" onclick="openMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <img src="../../../assets/nextG.png" />
+  </div>
+  <div class="nav-links">
+    <a>Tab 1</a>
+    <a>Tab 2</a>
+    <a>Tab 3</a>
+    <a>Tab 4</a>
+    <a>Tab 5</a>
+  </div>
+  <div class="nav-actions" onclick="toggleSetting()" *ngIf="isTokenValid">
+      <img src={{img}} />
+      <div class="username">{{this.username}} <i class="fa-solid fa-chevron-down"></i></div>
+      <div id="nav-dropdown" class="dropdown-content">
+        <a (click)="onClick('settings')"><i class="fa-solid fa-gear"></i> Account settings</a>
+        <a (click)="onClick('payment')"><i class="fa-solid fa-money-bill-wave"></i> Plan</a>
+        <div class="divider"></div>
+        <a (click)="logout()"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+      </div>
+  </div>
+  <div class="nav-actions" *ngIf="!isTokenValid">
+    <button class="signup" (click)="goToSignUp()">Sign Up</button>
+    <button class="signin" (click)="goToSignIn()">Sign In</button>
+  </div>
+</div>
+<div class="side-menu" id="side-menu">
+  <button class="close-menu btn-menu" onclick="closeMenu()"><i class="fa-solid fa-xmark"></i></button>
+  <a>Tab 1</a>
+  <a>Tab 2</a>
+  <a>Tab 3</a>
+  <a>Tab 4</a>
+  <a>Tab 5</a>
+</div>

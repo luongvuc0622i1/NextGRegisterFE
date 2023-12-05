@@ -1,0 +1,74 @@
+<form class="form-purchase" [formGroup]="formPayByAlipay">
+  <div class="w-100">
+    <div class="relative">
+      <label class="input-label-default gray-1" for="cardholderName">Cardholder Name</label>
+      <input class="input-field body-4 w-100" type="text" id="cardholderName" formControlName="cardholderName"
+        (input)="onInputCardholderName()" />
+    </div>
+  </div>
+  <div class="w-100 divi-2">
+    <div class="w-100">
+      <div class="relative">
+        <label class="input-label-default gray-1" for="billingAddress">Billing Address</label>
+        <select class="input-field body-4 w-100 address" id="billingAddress" formControlName="billingAddress">
+          <option selected disabled hidden></option>
+          <option *ngFor="let option of countries">{{ option }}</option>
+        </select>
+        <div class="card-icons">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M8 10L12 14L16 10" stroke="#00214D" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="w-100">
+      <div class="relative">
+        <label class="input-label-default gray-1" for="postalCode">Postal Code</label>
+        <input class="input-field body-4 w-100" type="text" id="postalCode" formControlName="postalCode" />
+      </div>
+    </div>
+  </div>
+  <div class="w-100">
+    <div class="relative">
+      <label class="input-label-default gray-1" for="taxIDNumber">Tax ID Number (Optional)</label>
+      <input class="input-field body-4 w-100" type="text" id="taxIDNumber" formControlName="taxIDNumber" />
+    </div>
+  </div>
+</form>
+<form class="form-purchase" [formGroup]="formTotal" style="margin-top: 24px;">
+  <div class="w-100">
+    <div class="relative">
+      <label class="input-label-default gray-1" for="discountCode">Discount Code (Optional)</label>
+      <input class="input-field body-4 w-100" type="text" id="discountCode" formControlName="discountCode" />
+      <div class="card-icons">
+        <a (click)="findDiscount()" class="apply">Apply</a>
+      </div>
+    </div>
+    <div class="mt-4 body-5 color-red">{{discountMessage}}</div>
+  </div>
+  <div class="total">
+    <div class="detail-pay">
+      <div class="item">
+        <div class="body-5 black">Subtotal</div>
+        <div class="body-5 black" *ngIf="formTotal.value.subTotal">{{ '$' + (formTotal.value.subTotal | number: '1.2-2') }}</div>
+      </div>
+      <div class="item">
+        <div class="body-5 black">Discount</div>
+        <div class="body-5 black" *ngIf="formTotal.value.discount">{{ '-$' + (formTotal.value.discount | number: '1.2-2') }}</div>
+      </div>
+      <div class="item">
+        <div class="body-5 black">Taxes</div>
+        <div class="body-5 black" *ngIf="formTotal.value.taxes">{{ '$' + (formTotal.value.taxes | number: '1.2-2') }}</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="body-1 black">Total Pay</div>
+      <div class="body-1 black" *ngIf="formTotal.value.totalPay">{{ '$' + (formTotal.value.totalPay | number: '1.2-2')
+        }}</div>
+    </div>
+  </div>
+  <div class="button-pay button-1 gray-1" *ngIf="!formTotal.value.totalPay">Pay</div>
+  <div class="button-pay button-1 gray-1 button-pay-hover" *ngIf="formTotal.value.totalPay" (click)="payWithAlipay()">Pay {{
+    '$' + (formTotal.value.totalPay | number: '1.2-2') }}</div>
+</form>
