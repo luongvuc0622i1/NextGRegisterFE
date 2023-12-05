@@ -11,12 +11,12 @@
             fill="#F9CA0D" />
         </svg>
       </div>
-      <div class="heading-6 black">{{rankName.charAt(0).toUpperCase() + rankName.slice(1)}}</div>
+      <div class="heading-6 color-black">{{rankName.charAt(0).toUpperCase() + rankName.slice(1)}}</div>
     </div>
-    <div class="body-4 gray-1">Next Bill on {{expiredDateMonth}} {{expiredDateDay}}, {{expiredDateYear}}</div>
+    <div class="body-4 color-gray-1">Next Bill on {{expiredDateMonth}} {{expiredDateDay}}, {{expiredDateYear}}</div>
   </div>
   <div class="buttons">
-    <div class="button bg-orange pointer button-1 white" (click)="goPro.emit()">Change Plan</div>
-    <div class="button border-orange pointer button-1 orange">Cancel Subcription</div>
+    <div class="button bg-orange pointer button-1 color-white" (click)="goPro.emit()">Change Plan</div>
+    <div class="button border-orange pointer button-1 color-orange">Cancel Subcription</div>
   </div>
 </div>

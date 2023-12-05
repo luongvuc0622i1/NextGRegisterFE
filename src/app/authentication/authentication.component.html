@@ -1,36 +1,3 @@
-<!-- <div class="container-background">
-  <div class="container">
-    <div class="divide">
-      <div class="mt-80 w-60">
-        <ng-container *ngIf="title != 'sign-in'; else formSignIn">
-          <ng-container *ngIf="title != 'sign-up'; else formSignUp">
-            <ng-container *ngIf="title != 'forgot-password'; else formForgotPassword">
-              <ng-container *ngIf="title != 'verify'; else formVerify">
-              </ng-container>
-            </ng-container>
-          </ng-container>
-        </ng-container>
-        <ng-template #formSignIn>
-          <app-sign-in [template]="template" (switchTemplate)="switchTemplate()" (goToSignUp)="goToSignUp()" (sendOtp)="sendOtp($event)" (signInEmail)="signInEmail($event)" (goToForgotPassword)="goToForgotPassword()"></app-sign-in>
-        </ng-template>
-        <ng-template #formSignUp>
-          <app-sign-up *ngIf="template" [template]="template" (switchTemplate)="switchTemplate()" (goToSignIn)="goToSignIn()" (sendOtp)="sendOtp($event)" (sendVerificationEmail)="sendVerificationEmail($event)"></app-sign-up>
-          <app-sign-up-validated *ngIf="!template" (goToSignIn)="goToSignIn()"></app-sign-up-validated>
-        </ng-template>
-        <ng-template #formForgotPassword>
-          <app-forgot-password *ngIf="template" [template]="template" (switchTemplate)="switchTemplate()" (goToSignIn)="goToSignIn()" (sendOtp)="sendOtp($event)" (sendVerificationEmail)="sendVerificationEmail($event)"></app-forgot-password>
-          <app-forgot-password-validated *ngIf="!template" (goToSignIn)="goToSignIn()"></app-forgot-password-validated>
-        </ng-template>
-        <ng-template #formVerify>
-          <app-verify [template]="template" (sendOtp)="sendOtp($event)" (verificationPhone)="verificationPhone($event)" (sendVerificationEmail)="sendVerificationEmail($event)"></app-verify>
-        </ng-template>
-      </div>
-    </div>
-    <div class="divide right">
-      <div class="mt-120 heading-3 color-white">Welcome to App</div>
-    </div>
-  </div>
-</div> -->
 <div class="wr-container">
   <div class="main-content">
     <div class="wr-form">

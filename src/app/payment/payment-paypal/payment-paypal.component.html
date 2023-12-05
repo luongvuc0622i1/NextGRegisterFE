@@ -2,7 +2,7 @@
   <div class="w-100 divi-2">
     <div class="w-100">
       <div class="relative">
-        <label class="input-label-default gray-1" for="billingAddress">Billing Address</label>
+        <label class="input-label-default color-gray-1" for="billingAddress">Billing Address</label>
         <select class="input-field body-4 w-100 address" id="billingAddress" formControlName="billingAddress">
           <option selected disabled hidden></option>
           <option *ngFor="let option of countries">{{ option }}</option>
@@ -17,22 +17,22 @@
     </div>
     <div class="w-100">
       <div class="relative">
-        <label class="input-label-default gray-1" for="postalCode">Postal Code</label>
+        <label class="input-label-default color-gray-1" for="postalCode">Postal Code</label>
         <input class="input-field body-4 w-100" type="text" id="postalCode" formControlName="postalCode" />
       </div>
     </div>
   </div>
   <div class="w-100">
     <div class="relative">
-      <label class="input-label-default gray-1" for="taxIDNumber">Tax ID Number (Optional)</label>
+      <label class="input-label-default color-gray-1" for="taxIDNumber">Tax ID Number (Optional)</label>
       <input class="input-field body-4 w-100" type="text" id="taxIDNumber" formControlName="taxIDNumber" />
     </div>
   </div>
 </form>
-<form class="form-purchase" [formGroup]="formTotal" style="margin-top: 24px;">
+<form class="mt-24 form-purchase" [formGroup]="formTotal">
   <div class="w-100">
     <div class="relative">
-      <label class="input-label-default gray-1" for="discountCode">Discount Code (Optional)</label>
+      <label class="input-label-default color-gray-1" for="discountCode">Discount Code (Optional)</label>
       <input class="input-field body-4 w-100" type="text" id="discountCode" formControlName="discountCode" />
       <div class="card-icons">
         <a (click)="findDiscountPer()" class="apply">Apply</a>
@@ -43,24 +43,24 @@
   <div class="total">
     <div class="detail-pay">
       <div class="item">
-        <div class="body-5 black">Subtotal</div>
-        <div class="body-5 black" *ngIf="formTotal.value.subTotal">{{ '$' + (formTotal.value.subTotal | number: '1.2-2')
+        <div class="body-5 color-black">Subtotal</div>
+        <div class="body-5 color-black" *ngIf="formTotal.value.subTotal">{{ '$' + (formTotal.value.subTotal | number: '1.2-2')
           }}</div>
       </div>
       <div class="item">
-        <div class="body-5 black">Discount</div>
-        <div class="body-5 black" *ngIf="formTotal.value.discount">{{ '-$' + (formTotal.value.discount | number:
+        <div class="body-5 color-black">Discount</div>
+        <div class="body-5 color-black" *ngIf="formTotal.value.discount">{{ '-$' + (formTotal.value.discount | number:
           '1.2-2') }}</div>
       </div>
       <div class="item">
-        <div class="body-5 black">Taxes</div>
-        <div class="body-5 black" *ngIf="formTotal.value.taxes">{{ '$' + (formTotal.value.taxes | number: '1.2-2') }}
+        <div class="body-5 color-black">Taxes</div>
+        <div class="body-5 color-black" *ngIf="formTotal.value.taxes">{{ '$' + (formTotal.value.taxes | number: '1.2-2') }}
         </div>
       </div>
     </div>
     <div class="item">
-      <div class="body-1 black">Total Pay</div>
-      <div class="body-1 black" *ngIf="formTotal.value.totalPay">{{ '$' + (formTotal.value.totalPay | number: '1.2-2')
+      <div class="body-1 color-black">Total Pay</div>
+      <div class="body-1 color-black" *ngIf="formTotal.value.totalPay">{{ '$' + (formTotal.value.totalPay | number: '1.2-2')
         }}</div>
     </div>
   </div>

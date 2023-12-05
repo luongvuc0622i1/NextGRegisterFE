@@ -1,11 +1,11 @@
 <div class="wr-container">
   <div class="wrapper">
     <div class="content">
-      <img class="img-NextG mb-32" src="../../assets/nextG.png" />
-      <div class="heading mb-32 black">NextG Solutions - And some content this long</div>
-      <div class="body-1 mb-8 black">Your account is {{rankName.charAt(0).toUpperCase() + rankName.slice(1)}} {{
+      <img class="img-nextG mb-32" src="../../assets/nextG.png" />
+      <div class="heading mb-32 color-black">NextG Solutions - And some content this long</div>
+      <div class="body-1 mb-8 color-black">Your account is {{rankName.charAt(0).toUpperCase() + rankName.slice(1)}} {{
         expiredDate ? 'to ' + expiredDateMonth + ' ' + expiredDateDay + ', ' + expiredDateYear : ''}}</div>
-      <div class="body-5 mb-32 black">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+      <div class="body-5 mb-32 color-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
         incididunt ut labore Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
         commodo con</div>
       <div *ngFor="let item of menu">
@@ -38,8 +38,8 @@
                     fill="#999999" />
                 </svg>
                 <div class="detail-info">
-                  <div class="button-3 gray-1">{{content.title}}</div>
-                  <div class="body-5 gray-1">{{content.description}}</div>
+                  <div class="button-3 color-gray-1">{{content.title}}</div>
+                  <div class="body-5 color-gray-1">{{content.description}}</div>
                 </div>
               </div>
             </div>
@@ -50,16 +50,16 @@
               *ngIf="item.id !== this.rankIdOld && expiredDate">
               <input type="radio" name="group" id="option1" checked>
               <label class="detail-info w-100 pointer" for="option1">
-                <div class="button-3 gray-1">${{calculateUpgrade(item, 0).toFixed(2)}}</div>
-                <div class="body-5 gray-1">Your {{rankName.charAt(0).toUpperCase() + rankName.slice(1)}} account to will
+                <div class="button-3 color-gray-1">${{calculateUpgrade(item, 0).toFixed(2)}}</div>
+                <div class="body-5 color-gray-1">Your {{rankName.charAt(0).toUpperCase() + rankName.slice(1)}} account to will
                   be upgraded to {{item.name.charAt(0).toUpperCase() + item.name.slice(1)}}.</div>
               </label>
             </div>
             <div class="item-detail" (click)="handleSetSubTotal($event, item, 1)">
               <input type="radio" name="group" id="option2" [checked]="item.id === this.rankIdOld || !expiredDate">
               <label class="detail-info w-100 pointer" for="option2">
-                <div class="button-3 gray-1">${{calculateUpgrade(item, 1).toFixed(2)}}</div>
-                <div class="body-5 gray-1">Your {{rankName.charAt(0).toUpperCase() + rankName.slice(1)}} account to will
+                <div class="button-3 color-gray-1">${{calculateUpgrade(item, 1).toFixed(2)}}</div>
+                <div class="body-5 color-gray-1">Your {{rankName.charAt(0).toUpperCase() + rankName.slice(1)}} account to will
                   {{rankName === item.name ? '' : 'be upgraded to ' + item.name.charAt(0).toUpperCase() +
                   item.name.slice(1) + ' and' }} be extended for an additional month.</div>
               </label>
@@ -67,8 +67,8 @@
             <div class="item-detail" (click)="handleSetSubTotal($event, item, 3)">
               <input type="radio" name="group" id="option3">
               <label class="detail-info w-100 pointer" for="option3">
-                <div class="button-3 gray-1">${{calculateUpgrade(item, 3).toFixed(2)}}</div>
-                <div class="body-5 gray-1">Your {{rankName.charAt(0).toUpperCase() + rankName.slice(1)}} account to will
+                <div class="button-3 color-gray-1">${{calculateUpgrade(item, 3).toFixed(2)}}</div>
+                <div class="body-5 color-gray-1">Your {{rankName.charAt(0).toUpperCase() + rankName.slice(1)}} account to will
                   {{rankName === item.name ? '' : 'be upgraded to ' + item.name.charAt(0).toUpperCase() +
                   item.name.slice(1) + ' and' }} be extended for three additional months.</div>
               </label>
@@ -76,8 +76,8 @@
             <div class="item-detail" (click)="handleSetSubTotal($event, item, 6)">
               <input type="radio" name="group" id="option4">
               <label class="detail-info w-100 pointer" for="option4">
-                <div class="button-3 gray-1">${{calculateUpgrade(item, 6).toFixed(2)}}</div>
-                <div class="body-5 gray-1">Your {{rankName.charAt(0).toUpperCase() + rankName.slice(1)}} account to will
+                <div class="button-3 color-gray-1">${{calculateUpgrade(item, 6).toFixed(2)}}</div>
+                <div class="body-5 color-gray-1">Your {{rankName.charAt(0).toUpperCase() + rankName.slice(1)}} account to will
                   {{rankName === item.name ? '' : 'be upgraded to ' + item.name.charAt(0).toUpperCase() +
                   item.name.slice(1) + ' and' }} be extended for six additional months.</div>
               </label>
@@ -85,8 +85,8 @@
             <div class="item-detail" (click)="handleSetSubTotal($event, item, 12)">
               <input type="radio" name="group" id="option5">
               <label class="detail-info w-100 pointer" for="option5">
-                <div class="button-3 gray-1">${{calculateUpgrade(item, 12).toFixed(2)}}</div>
-                <div class="body-5 gray-1">Your {{rankName.charAt(0).toUpperCase() + rankName.slice(1)}} account to will
+                <div class="button-3 color-gray-1">${{calculateUpgrade(item, 12).toFixed(2)}}</div>
+                <div class="body-5 color-gray-1">Your {{rankName.charAt(0).toUpperCase() + rankName.slice(1)}} account to will
                   {{rankName === item.name ? '' : 'be upgraded to ' + item.name.charAt(0).toUpperCase() +
                   item.name.slice(1) + ' and' }} be extended for an additional year.</div>
               </label>
@@ -99,10 +99,10 @@
   <div class="wrapper">
     <div class="content content-right">
       <div class="buttons-pay-by mb-40">
-        <div class="button-pay-by button-3 gray-1" (click)="activeButton = 'payment-card'"
-          [ngClass]="{ 'button-pay-by-selected black': activeButton === 'payment-card' }">Pay By Card</div>
-        <div class="button-pay-by button-3 gray-1" (click)="activeButton = 'payment-paypal'"
-          [ngClass]="{ 'button-pay-by-selected black': activeButton === 'payment-paypal' }">Pay By Paypal</div>
+        <div class="button-pay-by button-3 color-gray-1" (click)="activeButton = 'payment-card'"
+          [ngClass]="{ 'button-pay-by-selected color-black': activeButton === 'payment-card' }">Pay By Card</div>
+        <div class="button-pay-by button-3 color-gray-1" (click)="activeButton = 'payment-paypal'"
+          [ngClass]="{ 'button-pay-by-selected color-black': activeButton === 'payment-paypal' }">Pay By Paypal</div>
       </div>
       <ng-container *ngIf="activeButton != 'payment-card'; else paymentCardTemplate">
         <ng-container *ngIf="activeButton != 'payment-paypal'; else paymentPaypalTemplate">
@@ -123,7 +123,7 @@
       <div class="modal-content">
         <img width="150px"
           src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSX1sjgKxrVbCa0m7uQRbT691YACAvzJsiDmQGPHD2ClGTt-sBc">
-        <div class="heading black">Purchase Successfully</div>
+        <div class="heading color-black">Purchase Successfully</div>
         <p>You have purchased for the NextG Solution {{menu[rankIdNew - 1].title}}</p>
         <div class="input-card button-pay button-pay-hover mt-30" (click)="backToHomepage()">Back to Homepage</div>
       </div>
@@ -132,7 +132,7 @@
       <div class="modal-content">
         <img width="150px" class="mb-10"
           src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQd3JmvxQqlA2T_SYzaN_aujCGWF2VA45J0Y8WVk9I1R2Ka0qW9">
-        <div class="heading black">Purchase Failed</div>
+        <div class="heading color-black">Purchase Failed</div>
         <p>Make sure your payment menthod is up to date then try again</p>
         <div class="input-card button-pay button-pay-hover mt-30" (click)="closeModalshowModalFailed()">Back</div>
       </div>
@@ -141,8 +141,8 @@
       <div class="modal-content">
         <img width="150px" class="mb-10"
           src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQd3JmvxQqlA2T_SYzaN_aujCGWF2VA45J0Y8WVk9I1R2Ka0qW9">
-        <div class="heading black">Downgrade</div>
-        <div class="body-5 black" style="text-align: unset; margin: 4px 0px 16px;">Your account will be {{menu[rankIdNew
+        <div class="heading color-black">Downgrade</div>
+        <div class="body-5 color-black" style="text-align: unset; margin: 4px 0px 16px;">Your account will be {{menu[rankIdNew
           - 1].name.charAt(0).toUpperCase() + menu[rankIdNew - 1].name.slice(1)}} to
           {{expiredDateMonth}} {{expiredDateDay}}, {{expiredDateYear}}</div>
         <div class="buttons mt-30">

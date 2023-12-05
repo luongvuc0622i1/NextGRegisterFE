@@ -1,6 +1,6 @@
 <form class="detail-information" [formGroup]="user">
   <div class="profile-picture">
-    <div class="button-3 black">Profile picture</div>
+    <div class="button-3 color-black">Profile picture</div>
     <div class="relative">
       <div class="avatar">
         <img class="circle-200" src={{user.value.img}} alt="Avatar">
@@ -14,7 +14,7 @@
     </div>
   </div>
   <div class="profile-picture-mb">
-    <div class="button-3 black">Profile picture</div>
+    <div class="button-3 color-black">Profile picture</div>
     <img class="circle-200" src={{user.value.img}} alt="Avatar">
     <label for="file-upload" class="edit-button">
       <i class="fa-solid fa-pen"></i> Edit
@@ -25,26 +25,26 @@
       <div class="w-100 divi-2">
         <div class="w-100">
           <div class="relative">
-            <label class="input-label-default gray-1" for="firstName">First Name</label>
+            <label class="input-label-default color-gray-1" for="firstName">First Name</label>
             <input class="input-field body-4 w-100" type="text" id="firstName" formControlName="firstName"
               (keyup)="validateFName()" />
           </div>
-          <div class="mt-4 body-5 red">{{statusFName}}</div>
+          <div class="mt-4 body-5 color-red">{{statusFName}}</div>
         </div>
         <div class="w-100">
           <div class="relative">
-            <label class="input-label-default gray-1" for="lastName">Last Name</label>
+            <label class="input-label-default color-gray-1" for="lastName">Last Name</label>
             <input class="input-field body-4 w-100" type="text" id="lastName" formControlName="lastName"
               (keyup)="validateLName()" />
           </div>
-          <div class="mt-4 body-5 red">{{statusLName}}</div>
+          <div class="mt-4 body-5 color-red">{{statusLName}}</div>
         </div>
       </div>
-      <div class="mt-4 body-5 gray-1">Your name may appear where you contribute or are mentioned. </div>
+      <div class="mt-4 body-5 color-gray-1">Your name may appear where you contribute or are mentioned. </div>
     </div>
     <div class="w-100">
       <div class="relative">
-        <label class="input-label-default gray-1" for="phone">Phone Number</label>
+        <label class="input-label-default color-gray-1" for="phone">Phone Number</label>
         <input class="input-field body-4 w-100" type="text" id="phone" formControlName="phone" (keyup)="validatePhone()"
           [readOnly]="this.user.value.phoneVerifired" />
         <div class="card-icons">
@@ -52,12 +52,12 @@
           <a class="verify verified" *ngIf="this.user.value.phoneVerifired">Verified</a>
         </div>
       </div>
-      <div class="mt-4 body-5 red">{{statusPhone}}</div>
-      <div class="mt-4 body-5 red" *ngIf="!this.user.value.phoneVerifired">{{errorMessage}}</div>
+      <div class="mt-4 body-5 color-red">{{statusPhone}}</div>
+      <div class="mt-4 body-5 color-red" *ngIf="!this.user.value.phoneVerifired">{{errorMessage}}</div>
     </div>
     <div class="w-100">
       <div class="relative">
-        <label class="input-label-default gray-1" for="email">Email</label>
+        <label class="input-label-default color-gray-1" for="email">Email</label>
         <input class="input-field body-4 w-100" type="text" id="email" formControlName="email" (keyup)="validateEmail()"
           [readOnly]="this.user.value.emailVerifired" />
         <div class="card-icons">
@@ -65,17 +65,17 @@
           <a class="verify verified" *ngIf="this.user.value.emailVerifired">Verified</a>
         </div>
       </div>
-      <div class="mt-4 body-5 red">{{statusEmail}}</div>
-      <div class="mt-4 body-5 red" *ngIf="!this.user.value.emailVerifired">{{errorMessage}}</div>
+      <div class="mt-4 body-5 color-red">{{statusEmail}}</div>
+      <div class="mt-4 body-5 color-red" *ngIf="!this.user.value.emailVerifired">{{errorMessage}}</div>
     </div>
     <div class="w-100">
       <div class="relative">
-        <label class="input-label-default gray-1" for="bio">Bio</label>
+        <label class="input-label-default color-gray-1" for="bio">Bio</label>
         <textarea class="input-field body-4 w-100" style="height: 100px;" type="text" id="bio"
           formControlName="bio"></textarea>
       </div>
     </div>
-    <div class="button-save button-1 mt-16 white" (click)="submit()">Save Changes</div>
+    <div class="button-save button-1 mt-16 color-white" (click)="submit()">Save Changes</div>
   </div>
 
   <div class="modal" *ngIf="showModalPhone">
